@@ -1,16 +1,72 @@
-# React + Vite
+🎬 React Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, modern React web app that lets users discover and search for movies — powered by the TMDB API.
+It features a Trending Movies section that updates dynamically based on user searches via Appwrite.
+Deployed live on Vercel:
+👉 https://react-movie-app-three-pi.vercel.app/
 
-Currently, two official plugins are available:
+**Features**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Search Movies – Search any movie title instantly using the TMDB API, uses debouncing to limit API calls
+Trending Movies – Automatically tracks and displays the top searched movies
+Real-Time Backend – Uses Appwrite to store and retrieve trending data
+Modern UI – Built with Tailwind CSS for responsive, clean design
+Optimized Search – Includes debouncing for smooth and efficient querying
 
-## React Compiler
+**Tech Stack**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React (Vite) -> Frontend framework
+Appwrite -> Backend
+TMDB API -> Movie data source
+Tailwind CSS -> Styling
 
-## Expanding the ESLint configuration
+🗂️ Project Structure
+movieapp/
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   └── (Navbar, Search, MovieCard, etc.)
+│   ├── App.css
+│   ├── App.jsx
+│   ├── appwrite.js
+│   ├── index.css
+│   └── main.jsx
+├── .env.local
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚙️ Setup & Installation
+
+1. Clone the repository
+
+git clone https://github.com/yourusername/movieapp.git
+cd movieapp
+
+2. Install dependencies
+
+npm install
+
+Create a .env.local file
+Add your own TMDB and Appwrite credentials:
+
+VITE_TMDB_API_KEY=your_tmdb_api_key
+VITE_APPWRITE_ENDPOINT=your_appwrite_endpoint
+VITE_APPWRITE_PROJECT_ID=your_appwrite_project_id
+VITE_APPWRITE_DATABASE_ID=your_database_id
+VITE_APPWRITE_TABLE_ID=your_table_id
+
+Run locally
+
+npm run dev
+
+**Live Demo
+**
+🔗 Try it here:
+👉 https://react-movie-app-three-pi.vercel.app/
