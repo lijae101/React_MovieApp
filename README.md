@@ -1,72 +1,55 @@
-🎬 React Movie App
+# 🎬 React Movie App
 
-A sleek, modern React web app that lets users discover and search for movies — powered by the TMDB API.
-It features a Trending Movies section that updates dynamically based on user searches via Appwrite.
-Deployed live on Vercel:
-👉 https://react-movie-app-three-pi.vercel.app/
+A modern movie search web app built with **React**, **Tailwind CSS**, and **Appwrite**.  
+The app lets users explore movies via the **TMDB API**, featuring live search, debounced API requests for performance, and a **trending movies** section powered by stored search data.
 
-**Features**
+🔗 **Live Demo:** [https://react-movie-app-three-pi.vercel.app/](https://react-movie-app-three-pi.vercel.app/)
 
-Search Movies – Search any movie title instantly using the TMDB API, uses debouncing to limit API calls
-Trending Movies – Automatically tracks and displays the top searched movies
-Real-Time Backend – Uses Appwrite to store and retrieve trending data
-Modern UI – Built with Tailwind CSS for responsive, clean design
-Optimized Search – Includes debouncing for smooth and efficient querying
+---
 
-**Tech Stack**
+## 🚀 Features
 
-React (Vite) -> Frontend framework
-Appwrite -> Backend
-TMDB API -> Movie data source
-Tailwind CSS -> Styling
+- 🔍 **Search Movies:** Find movies in real time using the TMDB API.  
+- ⚡ **Debounced Search:** Optimized API calls using input debouncing to reduce unnecessary requests.  
+- 🔥 **Trending Movies:** Displays the top 5 most searched movies, dynamically updated from the Appwrite database.  
+- 🎨 **Modern UI:** Built with Tailwind CSS for a responsive, sleek look.  
+- 🧠 **Database Integration:** Uses Appwrite to track and store search frequency data.  
+- 🌱 **Future Enhancements:**  
+  - User accounts and authentication  
+  - Ability to favorite movies  
+  - Detailed movie info pages
 
-🗂️ Project Structure
+---
+
+## 🧩 Tech Stack
+
+- **Frontend:** React (Vite)
+- **Styling:** Tailwind CSS  
+- **Database:** Appwrite  
+- **API:** TMDB (The Movie Database)  
+- **Hosting:** Vercel  
+
+---
+
+## 🗂️ Project Structure
+
+```bash
 movieapp/
-├── node_modules/
 ├── public/
 ├── src/
 │   ├── assets/
 │   ├── components/
-│   │   └── (Navbar, Search, MovieCard, etc.)
-│   ├── App.css
+│   │   ├── Navbar.jsx
+│   │   ├── Search.jsx
+│   │   ├── MovieCard.jsx
 │   ├── App.jsx
-│   ├── appwrite.js
-│   ├── index.css
-│   └── main.jsx
+│   ├── App.css
+│   ├── main.jsx
+├── appwrite.js
 ├── .env.local
-├── .gitignore
-├── eslint.config.js
 ├── index.html
-├── package-lock.json
 ├── package.json
-├── README.md
-└── vite.config.js
+├── vite.config.js
+└── README.md
 
-⚙️ Setup & Installation
 
-1. Clone the repository
-
-git clone https://github.com/yourusername/movieapp.git
-cd movieapp
-
-2. Install dependencies
-
-npm install
-
-Create a .env.local file
-Add your own TMDB and Appwrite credentials:
-
-VITE_TMDB_API_KEY=your_tmdb_api_key
-VITE_APPWRITE_ENDPOINT=your_appwrite_endpoint
-VITE_APPWRITE_PROJECT_ID=your_appwrite_project_id
-VITE_APPWRITE_DATABASE_ID=your_database_id
-VITE_APPWRITE_TABLE_ID=your_table_id
-
-Run locally
-
-npm run dev
-
-**Live Demo
-**
-🔗 Try it here:
-👉 https://react-movie-app-three-pi.vercel.app/
